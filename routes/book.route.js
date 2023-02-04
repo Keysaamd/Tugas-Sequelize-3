@@ -1,6 +1,9 @@
 const express = require(`express`)
 const app = express()
 app.use(express.json())
+const bookController =
+require(`../controllers/book.controller`)
+const upload = require("../controllers/upload-cover")
 
 app.get("/", bookController.getAllBooks)
 app.post("/find", bookController.findBook)
